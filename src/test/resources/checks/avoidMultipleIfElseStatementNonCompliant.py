@@ -17,7 +17,7 @@ def shouldBeCompliantBecauseVariableUsedMaximumTwiceInComposedElseStatements():
     if nb1 == 1:
         nb1 = 2
     else:
-        if nb1 == 2: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        if nb1 == 2: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 1
     return nb1
 
@@ -28,9 +28,9 @@ def shouldBeNotCompliantBecauseVariablesUsedMaximumTwiceAndDifferentsVariablesUs
     nb1 = 0
     nb2 = 0
     nb3 = 0
-    if nb3 == 1 and nb3 == 2 and nb3 == 3: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+    if nb3 == 1 and nb3 == 2 and nb3 == 3: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
         nb1 = 1
-    else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+    else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
         nb2 = 2
     if nb2 == 2:
         nb1 = 3
@@ -47,7 +47,7 @@ def shouldBeNotCompliantBecauseVariablesIsUsedMoreThanTwice():
         nb1 = 2
     else:
         nb1 = 3
-    if nb1 == 2: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+    if nb1 == 2: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
         nb1 = 4
     return nb1
 
@@ -59,7 +59,7 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInIfStatementsAtDifferen
     if nb1 == 1:
         if nb1 == 2:
             nb1 = 1
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 3
     else:
         nb1 = 2
@@ -74,9 +74,9 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
     if nb1 == 1:
         nb1 = 2
     else:
-        if nb1 == 2:  # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        if nb1 == 2:  # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 1
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 3
     return nb1
 
@@ -89,12 +89,12 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
     if nb1 == 1:
         if nb1 == 3:
             nb1 = 4
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 5
     else:
-        if nb1 == 2: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        if nb1 == 2: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 1
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 3
     return nb1
 
@@ -108,12 +108,12 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
     if nb1 == 1:
         if nb1 == 3:
             nb1 = 4
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 5
     elif nb2 == 2:
         if nb1 == 4:
             nb1 = 5
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 6
     return nb1
 
@@ -132,7 +132,7 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
     elif nb2 == 2:
         if nb1 == 3:
             nb1 = 4
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 5
     return nb1
 
@@ -145,12 +145,12 @@ def shouldBeNotCompliantBecauseVariableUsedMaximumTwiceInComposedElseStatements(
     if nb1 == 1:
         nb1 = 2
     else:
-        if nb1 == 2: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        if nb1 == 2: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
             nb1 = 1
-        else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
-            if nb1 == 3: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+        else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
+            if nb1 == 3: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
                 nb1 = 4
-            else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+            else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
                 nb1 = 5
     return nb1
 
@@ -165,7 +165,7 @@ def shouldBeNotCompliantBecauseTheSameVariableIsUsedMoreThanTwice():
         nb2 = 1
     elif nb1 == nb2:
         nb2 = 2
-    else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+    else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
         nb2 = 4
     return nb2
 
@@ -181,8 +181,8 @@ def shouldBeNotCompliantBecauseTheSameVariableIsUsedManyTimes():
         nb2 = 1
     elif nb1 == nb2:
         nb2 = 2
-    elif nb3 == nb1: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+    elif nb3 == nb1: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
         nb2 = 3
-    else: # Noncompliant {{Use a switch statement instead of multiple if-else if possible}}
+    else: # Noncompliant {{Use a match-case statement instead of multiple if-else if possible}}
         nb2 = 4
     return nb2
