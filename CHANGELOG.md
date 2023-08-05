@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Python rules moved from `ecoCode` repository to current repository
+- [#142](https://github.com/green-code-initiative/ecoCode/issues/142) new Python rule : Multiple if-else statement + refactoring implementation
 - [#205](https://github.com/green-code-initiative/ecoCode/issues/205) compatibility with SonarQube 10.1
 
 ### Changed
