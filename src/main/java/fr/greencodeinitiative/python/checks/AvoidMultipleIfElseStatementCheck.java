@@ -47,7 +47,7 @@ import static org.sonar.plugins.python.api.tree.Tree.Kind.*;
 @Rule(key = "EC2")
 public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
 
-    public static final String ERROR_MESSAGE = "Use a switch statement instead of multiple if-else if possible";
+    public static final String ERROR_MESSAGE = "Use a match-case statement instead of multiple if-else if possible";
 
     // data structure for following usage of variable inside all the AST tree
     private VariablesPerLevelDataStructure variablesStruct = new VariablesPerLevelDataStructure();
