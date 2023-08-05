@@ -33,7 +33,7 @@ import org.sonar.plugins.python.api.tree.FunctionDef;
 import org.sonar.plugins.python.api.tree.IfStatement;
 import org.sonar.plugins.python.api.tree.Statement;
 import org.sonar.plugins.python.api.tree.Tree;
-import static org.sonar.plugins.python.api.tree.Tree.Kind.FUNCDEF;
+import static org.sonar.plugins.python.api.tree.Tree.Kind.*;
 
 /**
  * FUNCTIONAL DESCRIPTION : please see ASCIIDOC description file of this rule (inside `ecocode-rules-spcifications`)
@@ -95,7 +95,7 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
 //                // the cirrent node is a block : visit block content
 //                visitNodeContent(((BlockTree)statement).statements(), pLevel);
 //            } else
-            if (statement.is(Tree.Kind.IF_STMT)) {
+            if (statement.is(IF_STMT)) {
                 visitIfNode(context, (IfStatement)statement, pLevel);
             }
         }
@@ -158,14 +158,14 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
     private void computeConditionVariables(SubscriptionContext context, BinaryExpression pBinExprTree, int pLevel) {
 
         // if multiple conditions, continue with each part of complex expression
-        if (pBinExprTree.is(Tree.Kind.AND) || pBinExprTree.is(Tree.Kind.OR)) {
+        if (pBinExprTree.is(AND) || pBinExprTree.is(OR)) {
             if (pBinExprTree.leftOperand() instanceof BinaryExpression) {
                 computeConditionVariables(context, (BinaryExpression) pBinExprTree.leftOperand(), pLevel);
             }
             if (pBinExprTree.rightOperand() instanceof BinaryExpression) {
                 computeConditionVariables(context, (BinaryExpression) pBinExprTree.rightOperand(), pLevel);
             }
-        } else if (pBinExprTree.is(Tree.Kind.COMPARISON)) {
+        } else if (pBinExprTree.is(COMPARISON)) {
 //        else if (pBinExprTree.is(Tree.Kind.EQUAL_TO)
 //                || pBinExprTree.is(Tree.Kind.NOT_EQUAL_TO)
 //                || pBinExprTree.is(Tree.Kind.GREATER_THAN)
