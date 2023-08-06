@@ -175,12 +175,14 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
 //        ) {
 
             // continue analyze with variables if some key-words are found
+            if (pBinExprTree.leftOperand().is(NAME)) {
 //            if (pBinExprTree.leftOperand().is(Tree.Kind.VARIABLE_IDENTIFIER)) {
-            if ("IDENTIFIER".equals(pBinExprTree.leftOperand().firstToken().type().getName())) {
+//            if ("IDENTIFIER".equals(pBinExprTree.leftOperand().firstToken().type().getName())) {
 //                computeVariables(context, (VariableIdentifierTree) pBinExprTree.leftOperand(), pLevel);
                 computeVariables(context, pBinExprTree.leftOperand(), pLevel);
             }
-            if ("IDENTIFIER".equals(pBinExprTree.rightOperand().firstToken().type().getName())) {
+            if (pBinExprTree.rightOperand().is(NAME)) {
+//            if ("IDENTIFIER".equals(pBinExprTree.rightOperand().firstToken().type().getName())) {
 //            if (pBinExprTree.rightOperand().is(Tree.Kind.VARIABLE_IDENTIFIER)) {
 //                computeVariables(context, (VariableIdentifierTree) pBinExprTree.rightOperand(), pLevel);
                 computeVariables(context, pBinExprTree.rightOperand(), pLevel);
