@@ -12,7 +12,7 @@
 # USE CASE : Non compliant use case to check if following is NON OK :
 #  - two uses of the same variable
 #  - usage of the same variable on different levels of IF statements
-def shouldBeCompliantBecauseVariableUsedMaximumTwiceInComposedElseStatements():
+def not_compliant_variables_used_max_twice_in_composed_else_statements():
     nb1 = 0
     if nb1 == 1:
         nb1 = 2
@@ -24,7 +24,7 @@ def shouldBeCompliantBecauseVariableUsedMaximumTwiceInComposedElseStatements():
 # NON COMPLIANT
 # USE CASE : non compliant use case to check if a variable is not used max twice on several IF / ELSE statements
 # at the same level
-def shouldBeNotCompliantBecauseVariablesUsedMaximumTwiceAndDifferentsVariablesUsed():
+def not_compliant_variables_used_max_twice_and_differents_variables_used():
     nb1 = 0
     nb2 = 0
     nb3 = 0
@@ -41,7 +41,7 @@ def shouldBeNotCompliantBecauseVariablesUsedMaximumTwiceAndDifferentsVariablesUs
 # NON COMPLIANT
 # USE CASE : NON compliant use case to check if following is NOT COMPLIANT :
 # one variable is used maximum in two IF / ELSE / elif statements
-def shouldBeNotCompliantBecauseVariablesIsUsedMoreThanTwice():
+def not_compliant_variable_used_more_than_twice():
     nb1 = 0
     if nb1 == 1:
         nb1 = 2
@@ -54,7 +54,7 @@ def shouldBeNotCompliantBecauseVariablesIsUsedMoreThanTwice():
 # NON COMPLIANT
 # USE CASE : NON compliant use case to check if following is NOT OK :
 #  - same variable used maximum twice : no compliant because 2 IFs and 1 ELSE
-def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInIfStatementsAtDifferentsLevels():
+def not_compliant_variable_used_more_than_twice_in_if_statements_at_differents_levels():
     nb1 = 0
     if nb1 == 1:
         if nb1 == 2:
@@ -69,7 +69,7 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInIfStatementsAtDifferen
 # USE CASE : non compliant use case to check if following is NOT OK :
 #  - two uses of the same variable : use thre times with 2 IFs and 1 ELSE
 #  - usage of the same variable on different levels of IF statements
-def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements():
+def not_compliant_variable_used_more_than_twice_in_composed_else_statements():
     nb1 = 0
     if nb1 == 1:
         nb1 = 2
@@ -84,7 +84,7 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
 # USE CASE : non compliant use case to check if following is NOT OK :
 #  - two uses of the same variable : use thre times with 2 IFs and 1 ELSE
 #  - usage of the same variable on different levels of IF statements
-def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatementsScenario2():
+def not_compliant_variable_used_more_than_twice_in_composed_else_statements_scenario_2():
     nb1 = 0
     if nb1 == 1:
         if nb1 == 3:
@@ -102,7 +102,7 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
 # USE CASE : non compliant use case to check if following is NOT OK :
 #  - two uses of the same variable : use thre times with 2 IFs and 1 ELSE
 #  - usage of the same variable on different levels of IF statements
-def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatementsScenario3():
+def not_compliant_variable_used_more_than_twice_in_composed_else_statements_scenario_3():
     nb1 = 0
     nb2 = 0
     if nb1 == 1:
@@ -121,7 +121,7 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
 # USE CASE : non compliant use case to check if following is NOT OK :
 #  - two uses of the same variable : use thre times with 2 IFs and 1 ELSE
 #  - usage of the same variable on different levels of IF statements
-def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatementsScenario4():
+def not_compliant_variable_used_more_than_twice_in_composed_else_statements_scenario_4():
     nb1 = 0
     nb2 = 0
     if nb1 == 1:
@@ -140,7 +140,7 @@ def shouldBeNotCompliantBecauseVariableUsedMoreThanTwiceInComposedElseStatements
 # USE CASE : NON compliant use case to check if following is NOT OK :
 #  - the same variable must used maximum twice
 #  - usage of the same variable on different levels of IF / ELSE statements
-def shouldBeNotCompliantBecauseVariableUsedMaximumTwiceInComposedElseStatements():
+def not_compliant_variable_used_max_twice_in_composed_else_statements():
     nb1 = 0
     if nb1 == 1:
         nb1 = 2
@@ -158,7 +158,7 @@ def shouldBeNotCompliantBecauseVariableUsedMaximumTwiceInComposedElseStatements(
 # USE CASE : NON compliant use case to check if following is NOT OK :
 #  - more than twice uses of the same variable
 #  - usage of the same variable on different kind of test statements (IF and elif)
-def shouldBeNotCompliantBecauseTheSameVariableIsUsedMoreThanTwice():
+def not_compliant_the_same_variable_is_used_more_than_twice():
     nb1 = 0
     nb2 = 10
     if nb1 == 1:
@@ -173,7 +173,7 @@ def shouldBeNotCompliantBecauseTheSameVariableIsUsedMoreThanTwice():
 # USE CASE : NON compliant use case to check if following is NOT OK :
 #  - more than twice uses of the same variable
 #  - usage of the same variable on different kind of test statements (IF and elif)
-def shouldBeNotCompliantBecauseTheSameVariableIsUsedManyTimes():
+def not_compliant_the_same_variable_is_used_many_times():
     nb1 = 0
     nb2 = 10
     nb3 = 11

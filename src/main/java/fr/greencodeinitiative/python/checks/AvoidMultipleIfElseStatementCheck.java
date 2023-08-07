@@ -67,10 +67,6 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
 
         FunctionDef method = (FunctionDef)pTree;
 
-//        if (!method.body().is(Tree.Kind.)) {
-//            return;
-//        }
-
         // reinit data structure before each method analysis
         variablesStruct = new VariablesPerLevelDataStructure();
 
@@ -91,10 +87,6 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
         }
 
         for (Statement statement : pLstStatements) {
-//            if (statement.is(Kind.BLOCK)) {
-//                // the cirrent node is a block : visit block content
-//                visitNodeContent(((BlockTree)statement).statements(), pLevel);
-//            } else
             if (statement.is(IF_STMT)) {
                 visitIfNode(context, (IfStatement)statement, pLevel);
             }
@@ -166,25 +158,12 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
                 computeConditionVariables(context, (BinaryExpression) pBinExprTree.rightOperand(), pLevel);
             }
         } else if (pBinExprTree.is(COMPARISON)) {
-//        else if (pBinExprTree.is(Tree.Kind.EQUAL_TO)
-//                || pBinExprTree.is(Tree.Kind.NOT_EQUAL_TO)
-//                || pBinExprTree.is(Tree.Kind.GREATER_THAN)
-//                || pBinExprTree.is(Tree.Kind.GREATER_THAN_OR_EQUAL_TO)
-//                || pBinExprTree.is(Tree.Kind.LESS_THAN_OR_EQUAL_TO)
-//                || pBinExprTree.is(Tree.Kind.LESS_THAN)
-//        ) {
 
-            // continue analyze with variables if some key-words are found
+            // continue to analyze with variables if some key-words are found
             if (pBinExprTree.leftOperand().is(NAME)) {
-//            if (pBinExprTree.leftOperand().is(Tree.Kind.VARIABLE_IDENTIFIER)) {
-//            if ("IDENTIFIER".equals(pBinExprTree.leftOperand().firstToken().type().getName())) {
-//                computeVariables(context, (VariableIdentifierTree) pBinExprTree.leftOperand(), pLevel);
                 computeVariables(context, pBinExprTree.leftOperand(), pLevel);
             }
             if (pBinExprTree.rightOperand().is(NAME)) {
-//            if ("IDENTIFIER".equals(pBinExprTree.rightOperand().firstToken().type().getName())) {
-//            if (pBinExprTree.rightOperand().is(Tree.Kind.VARIABLE_IDENTIFIER)) {
-//                computeVariables(context, (VariableIdentifierTree) pBinExprTree.rightOperand(), pLevel);
                 computeVariables(context, pBinExprTree.rightOperand(), pLevel);
             }
         }
@@ -195,22 +174,17 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
      * @param pVarIdTree The Variable AST structure
      * @param pLevel the level of structure
      */
-//    private void computeVariables(SubscriptionContext context, VariableIdentifierTree pVarIdTree, int pLevel) {
     private void computeVariables(SubscriptionContext context, Expression pVarIdTree, int pLevel) {
-//        if (pVarIdTree.variableExpression().is(Kind.VARIABLE_IDENTIFIER)) {
-            // increment the variable counter to list of all variables
-//            int nbUsed = variablesStruct.incrementVariableUsageForLevel(pVarIdTree.text(), pLevel);
+        // increment the variable counter to list of all variables
         int nbUsed = variablesStruct.incrementVariableUsageForLevel(pVarIdTree.firstToken().value(), pLevel);
 
-            // increment variable counter to list of variables already declared for current if or elseif struture
-//            variablesStruct.incrementVariableUsageForLevelForCurrentIfStruct(pVarIdTree.text(), pLevel);
+        // increment variable counter to list of variables already declared for current if or elseif struture
         variablesStruct.incrementVariableUsageForLevelForCurrentIfStruct(pVarIdTree.firstToken().value(), pLevel);
 
-            // raise an error if maximum
-            if (nbUsed > 2) {
-                context.addIssue(pVarIdTree.firstToken(), ERROR_MESSAGE);
-            }
-//        }
+        // raise an error if maximum
+        if (nbUsed > 2) {
+            context.addIssue(pVarIdTree.firstToken(), ERROR_MESSAGE);
+        }
     }
 
     /**
@@ -306,7 +280,7 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
 
         // map variable counters per level for current If / ElseIf structure
         // purpose : used by compute variables Else process (because Else structure is particular : 
-        // we don't know previous variables and we need previous If / ElseIf structure to know variables)
+        // we don't know previous variables, and we need previous If / ElseIf structure to know variables)
         private final Map<Integer, Map<String, Integer>> mapVariablesPerLevelForCurrentIfStruct;
 
         public VariablesPerLevelDataStructure() {

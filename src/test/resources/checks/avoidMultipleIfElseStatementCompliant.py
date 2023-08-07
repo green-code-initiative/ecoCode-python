@@ -11,7 +11,7 @@
 # COMPLIANT
 # USE CASE : compliant use case to check if a variable is used maximum twice on several IF / ELSE statements
 # at the same level AND no problem with several IF staments at the same level using different variables
-def shouldBeCompliantBecauseVariablesUsedMaximumTwiceAndDifferentsVariablesUsed():
+def compliant_variables_used_max_twice_and_differents_variables():
     nb1 = 0
     nb2 = 0
     nb3 = 0
@@ -28,7 +28,7 @@ def shouldBeCompliantBecauseVariablesUsedMaximumTwiceAndDifferentsVariablesUsed(
 # COMPLIANT
 # USE CASE : compliant use case to check if a variable is used maximum twice on several IF / ELSE statements
 # at the same level AND no problem with several IF staments at the same level using different variables
-def shouldBeCompliantBecauseVariablesUsedMaximumTwiceAndDifferentsVariablesUsedAtDiffLevels():
+def compliant_variables_used_max_twice_and_differents_variables_at_diff_levels():
     nb1 = 0
     nb2 = 0
     nb3 = 0
@@ -51,7 +51,7 @@ def shouldBeCompliantBecauseVariablesUsedMaximumTwiceAndDifferentsVariablesUsedA
 # COMPLIANT
 # USE CASE : compliant use case to check if a variable is used maximum twice on several IF / ELSE statements
 # at the same level AND no problem with several IF staments at the same level using different variables
-def shouldBeCompliantBecauseVariablesUsedMaximumTwiceAndDiffVariablesUsedAtDiffLevelsScenario2():
+def compliant_variables_used_max_twice_and_diff_variables_used_at_diff_levels_scenario_2():
     nb1 = 0
     nb2 = 0
     nb3 = 0
@@ -76,7 +76,7 @@ def shouldBeCompliantBecauseVariablesUsedMaximumTwiceAndDiffVariablesUsedAtDiffL
 
 # COMPLIANT
 # USE CASE : compliant use case to check if one variable is used maximum twice in different IF statements
-def shouldBeCompliantBecauseVariableUsedMaximumTwiceInIfStatements():
+def compliant_variables_used_maximum_twice_in_if_statements():
     nb1 = 0
     if nb1 == 1:
         nb1 = 1
@@ -88,7 +88,7 @@ def shouldBeCompliantBecauseVariableUsedMaximumTwiceInIfStatements():
 # USE CASE : compliant use case to check if following is OK :
 #  - two uses of the same variable
 #  - usage of the same variable on different levels of IF statements
-def shouldBeCompliantBecauseSereralVariablesUsedMaximumTwiceInComposedElseStatements():
+def compliant_variables_used_max_twice_in_composed_else_statements():
     nb1 = 0
     nb2 = 0
     nb3 = 0
@@ -108,7 +108,7 @@ def shouldBeCompliantBecauseSereralVariablesUsedMaximumTwiceInComposedElseStatem
 # USE CASE : compliant use case to check if following is OK :
 #  - two uses of the same variable
 #  - usage of the same variable on different kind of test statements (IF and elif)
-def shouldBeCompliantBecauseVariableUsedMaximumTwiceInIfOrelifStatements():
+def compliant_variables_used_max_twice_in_if_orelif_statements():
     nb1 = 0
     nb2 = 10
     if nb1 == 1:
@@ -121,7 +121,7 @@ def shouldBeCompliantBecauseVariableUsedMaximumTwiceInIfOrelifStatements():
 # USE CASE : compliant use case to check if following is OK :
 #  - two uses of the same variable
 #  - usage of the same variable on different kind of test statements (IF and elif)
-def shouldBeCompliantBecauseSeveralVariablesUsedMaximumTwiceInIfOrelifStatements():
+def compliant_variables_used_max_twice_in_if_orelif_statements_scenario_2():
     nb1 = 0
     nb2 = 10
     nb3 = 3
