@@ -17,4 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deleted
 
+## [0.0.0]
+
+### Added
+
+### Changed
+
+### Deleted
+
 [unreleased]: https://github.com/green-code-initiative/ecoCode-python/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/green-code-initiative/ecoCode-python/compare/v0.0.0...0.0.1
