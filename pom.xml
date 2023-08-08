@@ -52,8 +52,7 @@
         <mockito.version>5.3.1</mockito.version>
 
         <!-- temporary version waiting for real automatic release in ecocode repository -->
-<!--        <ecocode-rules-specifications.version>0.0.2</ecocode-rules-specifications.version>-->
-        <ecocode-rules-specifications.version>1.3.2-SNAPSHOT</ecocode-rules-specifications.version>
+        <ecocode-rules-specifications.version>0.0.3</ecocode-rules-specifications.version>
 
         <sonar-analyzer-commons.version>2.5.0.1358</sonar-analyzer-commons.version>
 
