@@ -34,7 +34,7 @@ Ready to use binaries are available [from GitHub](https://github.com/green-code-
 
 | Plugins Version  | SonarQube version           |
 |------------------|-----------------------------|
-| <= 1.3.+         | check `ecoCode` repository  |
+| <= 1.3.+         | check [ecoCode](https://github.com/green-code-initiative/ecoCode) repository  |
 | 1.4.+            | SonarQube 9.4.+ LTS to 10.0 |
 
 ☕ Plugin Java part compatibility
@@ -42,18 +42,18 @@ Ready to use binaries are available [from GitHub](https://github.com/green-code-
 
 | Plugins Version  | Java version                |
 |------------------|-----------------------------|
-| <= 1.3.+         | check `ecoCode` repository  |
+| <= 1.3.+         | check [ecoCode](https://github.com/green-code-initiative/ecoCode) repository  |
 | 1.4.+            | 11 / 17                     |
 
 🤝 Contribution
 ---------------
 
-check [ecoCode repository](https://github.com/green-code-initiative/ecoCode)
+check [ecoCode](https://github.com/green-code-initiative/ecoCode) repository
 
 🤓 Main contributors
 --------------------
 
-check [ecoCode repository](https://github.com/green-code-initiative/ecoCode)
+check [ecoCode](https://github.com/green-code-initiative/ecoCode) repository
 
 Links
 -----
