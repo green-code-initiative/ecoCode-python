@@ -1,4 +1,4 @@
-EcoCode-php
+EcoCode-python
 ===========
 
 _ecoCode_ is a collective project aiming to reduce environmental footprint of software at the code level. The goal of
