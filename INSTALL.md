@@ -1,6 +1,3 @@
-- [Project structure](#project-structure)
-- [Plugin-specific guides](#plugin-specific-guides)
-
 Common installation notes / requirements
 ========================================
 
@@ -25,8 +22,3 @@ ecoCode-php             # Root directory
 ```
 
 You will find more information about the plugins’ architecture in their folders
-
-Plugin-specific guides
-----------------------
-
-- [PHP how-to](php-plugin/README.md)
