@@ -31,7 +31,7 @@ check [ecoCode repository](https://github.com/green-code-initiative/ecoCode#-get
 🛒 Distribution
 ------------------
 
-Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecoCode-php/releases).
+Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecoCode-python/releases).
 
 🧩 Compatibility
 ------------------

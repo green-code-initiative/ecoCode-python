@@ -14,7 +14,7 @@ Project structure
 Here is a preview of project tree :
 
 ```txt
-ecoCode-php             # Root directory
+ecoCode-python          # Root directory
 |
 +--src                  # source directory
 |

@@ -1,8 +1,10 @@
 name: Tag Release
+
 on:
   push:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
+
 jobs:
   checks:
     name: Requirements
@@ -11,7 +13,7 @@ jobs:
       - name: Check user permissions
         uses: 74th/workflow-permission-action@1.0.0
         with:
-          users: dedece35,glalloue,jhertout,jules-delecour-dav,olegoaer,zippy1978
+          users: dedece35,glalloue,jhertout,jules-delecour-dav,olegoaer,zippy1978,utarwyn
   build:
     name: Build And Release
     runs-on: ubuntu-latest
@@ -48,7 +50,8 @@ jobs:
       - name: Export UPLOAD_URL
         id: export_upload_url
         run: echo "upload_url=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_OUTPUT
-  upload-python:
+
+  upload:
     name: Upload Python Plugin
     runs-on: ubuntu-latest
     needs: build
