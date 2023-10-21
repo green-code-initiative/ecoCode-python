@@ -24,6 +24,6 @@ import org.sonar.python.checks.utils.PythonCheckVerifier;
 public class AvoidTryCatchFinallyCheckTest {
     @Test
     public void test() {
-        PythonCheckVerifier.verify("src/test/resources/checks/avoidTryCatchFinallyCheck.py", new AvoidTryCatchFinallyCheck());
+        PythonCheckVerifier.verify("src/test/resources/checks/avoidTryCatchWithFileOpenCheck.py", new AvoidTryCatchFileOpenCheck());
     }
 }
