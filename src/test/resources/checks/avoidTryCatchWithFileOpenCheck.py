@@ -2,7 +2,6 @@ import os.path
 
 path = 'hello.txt'
 
-
 def my_function():
     x=0
 
