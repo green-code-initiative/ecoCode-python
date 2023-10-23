@@ -21,9 +21,9 @@ package fr.greencodeinitiative.python.checks;
 import org.junit.Test;
 import org.sonar.python.checks.utils.PythonCheckVerifier;
 
-public class AvoidTryCatchFinallyCheckTest {
+public class AvoidTryCatchWithFileOpenedCheckTest {
     @Test
     public void test() {
-        PythonCheckVerifier.verify("src/test/resources/checks/avoidTryCatchWithFileOpenCheck.py", new AvoidTryCatchFileOpenCheck());
+        PythonCheckVerifier.verify("src/test/resources/checks/avoidTryCatchWithFileOpenedCheck.py", new AvoidTryCatchWithFileOpenedCheck());
     }
 }

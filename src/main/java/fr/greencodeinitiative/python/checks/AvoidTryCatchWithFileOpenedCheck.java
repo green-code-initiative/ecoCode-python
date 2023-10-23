@@ -24,16 +24,12 @@ import org.sonar.plugins.python.api.symbols.Symbol;
 import org.sonar.plugins.python.api.tree.*;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
-import java.util.List;
-import java.util.Objects;
-
 import static org.sonar.plugins.python.api.tree.Tree.Kind.CALL_EXPR;
-import static org.sonar.plugins.python.api.tree.Tree.Kind.LIST_COMPREHENSION;
 
 @Rule(key = "EC35")
 @DeprecatedRuleKey(repositoryKey = "gci-python", ruleKey = "S34")
 @DeprecatedRuleKey(repositoryKey = "gci-python", ruleKey = "EC34")
-public class AvoidTryCatchFileOpenCheck extends PythonSubscriptionCheck {
+public class AvoidTryCatchWithFileOpenedCheck extends PythonSubscriptionCheck {
 
     public static final String DESCRIPTION = "Avoid the use of try-catch with a file open in try block";
 
