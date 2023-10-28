@@ -64,12 +64,8 @@ public class AvoidTryCatchWithFileOpenedCheck extends PythonSubscriptionCheck {
     }
 
     private void visitCallExpression(SubscriptionContext context, CallExpression callExpression){
-        switch (getFunctionNameFromCallExpression(callExpression)) {
-            case "open":
-                context.addIssue(callExpression.firstToken(), DESCRIPTION);
-                break;
-            default:
-                break;
+        if ("open".equals(getFunctionNameFromCallExpression(callExpression))) {
+            context.addIssue(callExpression.firstToken(), DESCRIPTION);
         }
     }
 
