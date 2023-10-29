@@ -2,11 +2,10 @@ import os.path
 
 path = 'hello.txt'
 
-
 def my_function():
     x=0
 
-    try: # Noncompliant {{Avoid the use of try-catch}}
+    try:
         print(x)
     except:
         print("Something went wrong")
@@ -14,8 +13,8 @@ def my_function():
         print("The 'try except' is finished")
 
 def foo():
-    try: # Noncompliant {{Avoid the use of try-catch}}
-        f = open(path)
+    try:
+        f = open(path) # Noncompliant {{Avoid the use of try-catch with a file open in try block}}
         print(f.read())
     except:
         print('No such file '+path)
