@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#5](https://github.com/green-code-initiative/ecoCode-python/pull/5) Upgrade licence system and licence headers of Java files
 - [#6](https://github.com/green-code-initiative/ecoCode-python/pull/6) Adding EC35 rule : EC35 rule replaces EC34 with a specific use case ("file not found" sepcific)
+- [#7](https://github.com/green-code-initiative/ecoCode-python/issues/7) Add build number to manifest
 
 ### Deleted
 
