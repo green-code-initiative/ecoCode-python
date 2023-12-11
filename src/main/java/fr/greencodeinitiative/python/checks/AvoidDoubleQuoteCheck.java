@@ -23,6 +23,11 @@ import org.sonar.plugins.python.api.SubscriptionContext;
 import org.sonar.plugins.python.api.tree.StringLiteral;
 import org.sonar.plugins.python.api.tree.Tree;
 
+/**
+ * @deprecated not applicable for Python
+ * (check discussion inside issue https://github.com/green-code-initiative/ecoCode-python/issues/4)
+ */
+@Deprecated(forRemoval = true)
 @Rule(key = "EC66")
 public class AvoidDoubleQuoteCheck extends PythonSubscriptionCheck {
     public static final String MESSAGE_RULE = "Avoid using quotation mark (\"), prefer using simple quote (')";
