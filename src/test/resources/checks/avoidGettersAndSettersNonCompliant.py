@@ -24,3 +24,9 @@ class Client():
 
     def get_weight(self): # Noncompliant {{Avoid creating getter and setter methods in classes}}
         return self.weight
+
+client = Client(25)
+client.get_age()
+client.set_age(25)
+client.get_weight()
+client.set_weight(5)
