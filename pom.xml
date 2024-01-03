@@ -154,10 +154,6 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.10</version>
-                <configuration>
-                    <output>file</output>
-                    <append>false</append>
-                </configuration>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -167,7 +163,6 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -184,6 +179,7 @@
                     <pluginClass>fr.greencodeinitiative.python.PythonPlugin</pluginClass>
                     <sonarLintSupported>true</sonarLintSupported>
                     <pluginApiMinVersion>${sonarqube.version}</pluginApiMinVersion>
+                    <skipDependenciesPackaging>true</skipDependenciesPackaging>
                     <jreMinVersion>${java.version}</jreMinVersion>
                     <archive>
                         <manifestEntries>
@@ -204,29 +200,30 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <shadedArtifactAttached>false</shadedArtifactAttached>
+                            <minimizeJar>true</minimizeJar>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <filters>
                                 <filter>
-                                    <artifact>commons-*:*</artifact>
+                                    <artifact>org.sonarsource.analyzer-commons:sonar-analyzer-commons:*</artifact>
                                     <excludes>
                                         <exclude>META-INF/**</exclude>
                                     </excludes>
                                 </filter>
                                 <filter>
-                                    <artifact>org.*:*</artifact>
-                                    <excludes>
-                                        <exclude>META-INF/**</exclude>
-                                        <exclude>org/sonar/api/batch/sensor/**</exclude>
-                                        <exclude>javax/annotation/**</exclude>
-                                    </excludes>
-                                </filter>
-                                <filter>
-                                    <artifact>com.*:*</artifact>
+                                    <artifact>org.glassfish:jakarta.json:*</artifact>
                                     <excludes>
                                         <exclude>META-INF/**</exclude>
                                     </excludes>
                                 </filter>
                                 <filter>
-                                    <artifact>junit:*</artifact>
+                                    <artifact>jakarta.json:jakarta.json-api:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/**</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>io.ecocode:ecocode-rules-specifications:*</artifact>
                                     <excludes>
                                         <exclude>META-INF/**</exclude>
                                     </excludes>
