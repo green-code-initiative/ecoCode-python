@@ -247,6 +247,9 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
     private void computeElseVariables(SubscriptionContext context, ElseClause pElseTree, int pLevel) {
 
         Map<String, Integer> mapVariables = variablesStruct.getVariablesForCurrentIfStruct(pLevel);
+
+        // specific use case : if there is no variables used in any conditions of IF / ELSEIF structures,
+        // we could have a NullPointerException if we don't check this case
         if (mapVariables == null || mapVariables.isEmpty()) { return; }
 
         for (Map.Entry<String, Integer> entry : mapVariables.entrySet()) {
