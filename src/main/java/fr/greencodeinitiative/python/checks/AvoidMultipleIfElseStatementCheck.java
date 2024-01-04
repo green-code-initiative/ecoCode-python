@@ -246,7 +246,10 @@ public class AvoidMultipleIfElseStatementCheck extends PythonSubscriptionCheck {
      */
     private void computeElseVariables(SubscriptionContext context, ElseClause pElseTree, int pLevel) {
 
-        for (Map.Entry<String, Integer> entry : variablesStruct.getVariablesForCurrentIfStruct(pLevel).entrySet()) {
+        Map<String, Integer> mapVariables = variablesStruct.getVariablesForCurrentIfStruct(pLevel);
+        if (mapVariables == null || mapVariables.isEmpty()) { return; }
+
+        for (Map.Entry<String, Integer> entry : mapVariables.entrySet()) {
             String variableName = entry.getKey();
 
             // increment usage of all variables in the same level of ELSE staetement
