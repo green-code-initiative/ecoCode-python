@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#7](https://github.com/green-code-initiative/ecoCode-python/issues/7) Add build number to manifest
 - [#123](https://github.com/green-code-initiative/ecoCode/issues/123) Improve unit tests for EC7 rule
 - Update ecocode-rules-specifications to 1.4.6
+- README.md upgrade : docker test environment
 
 ### Deleted
 
