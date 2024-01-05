@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changed
+
+### Deleted
+
+## [1.4.1] - 2024-01-05
+
+### Added
+
 - Add 10.3 SonarQube compatibility
 
 ### Changed
@@ -33,5 +41,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#142](https://github.com/green-code-initiative/ecoCode/issues/142) new Python rule : Multiple if-else statement + refactoring implementation
 - [#205](https://github.com/green-code-initiative/ecoCode/issues/205) compatibility with SonarQube 10.1
 
-[unreleased]: https://github.com/green-code-initiative/ecoCode-python/compare/v1.4.0...HEAD
+[unreleased]: https://github.com/green-code-initiative/ecoCode-python/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/green-code-initiative/ecoCode-python/compare/v1.4.0...1.4.1
 [1.4.0]: https://github.com/green-code-initiative/ecoCode-python/compare/v0.0.0...1.4.0
