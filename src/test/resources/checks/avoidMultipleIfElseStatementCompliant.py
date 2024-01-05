@@ -136,3 +136,19 @@ def compliant_variables_used_max_twice_in_if_orelif_statements_scenario_2():
     else:
         nb2 = 3
     return nb2
+
+# COMPLIANT
+# USE CASE (secondary) : check no NullPointerException if no variables really used in conditions
+# USE CASE : compliant use case to check if following is OK :
+#  - more than twice uses of the same variable
+#  - BUT not directly used, only inside a function
+def compliant_the_same_variable_is_used_more_than_twice_but_inside_functions():
+    nb1 = 3
+    nb2 = 10
+    if len(nb1) == 1:
+        nb2 = 1
+    elif len(nb1) == 3:
+        nb2 = 2
+    else:
+        nb2 = 4
+    return nb2
