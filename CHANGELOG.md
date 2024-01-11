@@ -11,9 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- [#14](https://github.com/green-code-initiative/ecoCode-python/issues/14) Correction of error with deprecated EC34 rule
-
 ### Deleted
+
+## [1.4.2] - 2024-01-11
+
+### Changed
+
+- [#14](https://github.com/green-code-initiative/ecoCode-python/issues/14) Correction of error with deprecated EC34 rule
+- Update ecocode-rules-specifications to 1.4.7
 
 ## [1.4.1] - 2024-01-05
 
@@ -45,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Comparison list
 
-[unreleased](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.1...HEAD)
+[unreleased](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.2...HEAD)
+[1.4.2](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.1...1.4.2)
 [1.4.1](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.0...1.4.1)
 [1.4.0](https://github.com/green-code-initiative/ecoCode-python/releases/tag/1.4.0)
