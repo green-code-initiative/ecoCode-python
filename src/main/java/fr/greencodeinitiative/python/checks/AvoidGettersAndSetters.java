@@ -44,6 +44,11 @@ public class AvoidGettersAndSetters extends PythonSubscriptionCheck {
     public void initialize(Context context) {
         context.registerSyntaxNodeConsumer(Tree.Kind.FUNCDEF, ctx -> {
             FunctionDef functionDef = (FunctionDef) ctx.syntaxNode();
+
+            if (isConstructorMethod(functionDef)) {
+                return; // Ignore constructors
+            }
+
             StatementList statementList = functionDef.body();
             List<Statement> statements = statementList.statements();
             if (functionDef.parent().parent().is(Tree.Kind.CLASSDEF)) {
@@ -51,6 +56,10 @@ public class AvoidGettersAndSetters extends PythonSubscriptionCheck {
                 checkAllSetters(statements, functionDef, ctx);
             }
         });
+    }
+
+    private boolean isConstructorMethod(FunctionDef functionDef) {
+        return functionDef.name() != null && "__init__".equals(functionDef.name().name());
     }
 
     public void checkAllSetters(List<Statement> statements, FunctionDef functionDef, SubscriptionContext ctx) {
