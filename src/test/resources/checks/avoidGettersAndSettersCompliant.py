@@ -1,5 +1,9 @@
 from datetime import date
 
+class Something:
+    def __init__(self, value):
+        self.value = value
+
 class Client():
 
     def __init__(self, age, weight):
