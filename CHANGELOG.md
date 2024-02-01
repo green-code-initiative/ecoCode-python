@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- [#17](https://github.com/green-code-initiative/ecoCode-python/issues/17) EC7 - correction setter problem on constructor method"
+- [#17](https://github.com/green-code-initiative/ecoCode-python/issues/17) EC7 - correction setter problem on constructor method
 
 ### Deleted
 
