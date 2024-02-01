@@ -155,6 +155,7 @@
                     <pluginApiMinVersion>${sonarqube.version}</pluginApiMinVersion>
                     <skipDependenciesPackaging>true</skipDependenciesPackaging>
                     <jreMinVersion>${java.version}</jreMinVersion>
+                    <requiredForLanguages>python</requiredForLanguages>
                     <archive>
                         <manifestEntries>
                             <Implementation-Build>${buildNumber}</Implementation-Build>
