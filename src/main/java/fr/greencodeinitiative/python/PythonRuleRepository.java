@@ -55,13 +55,11 @@ public class PythonRuleRepository implements RulesDefinition, PythonCustomRuleRe
   @Override
   public List<Class> checkClasses() {
     return Arrays.asList(
-            AvoidDoubleQuoteCheck.class,
             AvoidGettersAndSetters.class,
             AvoidGlobalVariableInFunctionCheck.class,
             AvoidSQLRequestInLoop.class,
             AvoidTryCatchWithFileOpenedCheck.class,
             AvoidUnoptimizedVectorImagesCheck.class,
-            NoFunctionCallWhenDeclaringForLoop.class,
             AvoidFullSQLRequest.class,
             AvoidListComprehensionInIterations.class,
             DetectUnoptimizedImageFormat.class,
