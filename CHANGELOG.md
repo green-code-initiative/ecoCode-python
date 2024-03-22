@@ -10,12 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - [#18](https://github.com/green-code-initiative/ecoCode-python/issues/18) Add support for SonarQube 10.4 "DownloadOnlyWhenRequired" feature
+- Add Support for SonarQube 10.4.1
 
 ### Changed
 
 - [#17](https://github.com/green-code-initiative/ecoCode-python/issues/17) EC7 - correction setter problem on constructor method
 
 ### Deleted
+
+- [#4](https://github.com/green-code-initiative/ecoCode-python/issues/4) Deprecate rule EC66 for Python because not applicable (see details inside issue)
+- [#21](https://github.com/green-code-initiative/ecoCode-python/issues/21) Deletion of EC69 for python because not relevant (after analysis)
 
 ## [1.4.2] - 2024-01-11
 
