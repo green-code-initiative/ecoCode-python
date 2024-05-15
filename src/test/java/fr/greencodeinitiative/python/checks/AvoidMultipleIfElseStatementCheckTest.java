@@ -26,7 +26,7 @@ import org.sonar.python.checks.utils.PythonCheckVerifier;
 public class AvoidMultipleIfElseStatementCheckTest {
 
     @Test
-    public void test() throws Exception {
+    public void test() {
         PythonCheckVerifier.verifyNoIssue("src/test/resources/checks/avoidMultipleIfElseStatementCompliant.py", new AvoidMultipleIfElseStatementCheck());
         PythonCheckVerifier.verify("src/test/resources/checks/avoidMultipleIfElseStatementNonCompliant.py", new AvoidMultipleIfElseStatementCheck());
     }
