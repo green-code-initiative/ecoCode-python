@@ -60,6 +60,7 @@ public class PythonRuleRepository implements RulesDefinition, PythonCustomRuleRe
             AvoidGlobalVariableInFunctionCheck.class,
             AvoidSQLRequestInLoop.class,
             AvoidTryCatchWithFileOpenedCheck.class,
+            AvoidUnlimitedCache.class,
             AvoidUnoptimizedVectorImagesCheck.class,
             NoFunctionCallWhenDeclaringForLoop.class,
             AvoidFullSQLRequest.class,
