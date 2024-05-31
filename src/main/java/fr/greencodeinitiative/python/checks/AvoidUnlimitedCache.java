@@ -17,7 +17,6 @@
  */
 package fr.greencodeinitiative.python.checks;
 
-import org.checkerframework.checker.units.qual.C;
 import org.sonar.check.Rule;
 import org.sonar.plugins.python.api.PythonSubscriptionCheck;
 import org.sonar.plugins.python.api.SubscriptionContext;
@@ -27,7 +26,6 @@ import org.sonar.plugins.python.api.tree.FunctionDef;
 import org.sonar.plugins.python.api.tree.Name;
 import org.sonar.plugins.python.api.tree.RegularArgument;
 import org.sonar.plugins.python.api.tree.Tree;
-import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 @Rule(key = "EC1337")
 public class AvoidUnlimitedCache extends PythonSubscriptionCheck {
@@ -37,45 +35,45 @@ public class AvoidUnlimitedCache extends PythonSubscriptionCheck {
     public static final String LRU_CACHE = "lru_cache";
     public static final String MAX_SIZE_ARGUMENT = "maxsize";
 
-
     public static final String CACHE = "cache";
 
     @Override
     public void initialize(Context context) {
         // Check function decorators
-        context.registerSyntaxNodeConsumer(Tree.Kind.FUNCDEF, this::check_function);
+        context.registerSyntaxNodeConsumer(Tree.Kind.FUNCDEF, this::checkFunction);
     }
 
-    private void check_function(SubscriptionContext ctx) {
+    private void checkFunction(SubscriptionContext ctx) {
         FunctionDef function = (FunctionDef) ctx.syntaxNode();
 
         function.decorators().forEach(decorator -> {
             // If decorator is @cache
-            if (is_cache_decorator(decorator)) {
+            if (isCacheDecorator(decorator)) {
                 ctx.addIssue(decorator, AvoidUnlimitedCache.DESCRIPTION);
             // If decorator is @lru_cache
-            }  else if (is_lru_cache_decorator(decorator)) {
-                if (decorator.arguments() != null) {
-                    decorator.arguments().arguments().forEach(arg -> {
-                        RegularArgument regArg = (RegularArgument) arg;
-                        if (MAX_SIZE_ARGUMENT.equals(regArg.keywordArgument().name()) && regArg.expression().is(Tree.Kind.NONE)) {
-                            ctx.addIssue(decorator, AvoidUnlimitedCache.DESCRIPTION);
-                        }
-                    });
-                }
+            }  else if (isLruCacheDecorator(decorator)
+                    && decorator.arguments() != null
+                    && decorator.arguments().arguments() != null
+            ) {
+                decorator.arguments().arguments().forEach(arg -> {
+                    RegularArgument regArg = (RegularArgument) arg;
+                    if (MAX_SIZE_ARGUMENT.equals(regArg.keywordArgument().name()) && regArg.expression().is(Tree.Kind.NONE)) {
+                        ctx.addIssue(decorator, AvoidUnlimitedCache.DESCRIPTION);
+                    }
+                });
             }
         });
     }
 
-    private boolean is_cache_decorator(Decorator decorator) {
-        return is_decorator(decorator, CACHE);
+    private boolean isCacheDecorator(Decorator decorator) {
+        return isDecorator(decorator, CACHE);
     }
 
-    private boolean is_lru_cache_decorator(Decorator decorator) {
-        return is_decorator(decorator, LRU_CACHE);
+    private boolean isLruCacheDecorator(Decorator decorator) {
+        return isDecorator(decorator, LRU_CACHE);
     }
 
-    private boolean is_decorator(Decorator decorator, String expression) {
+    private boolean isDecorator(Decorator decorator, String expression) {
         Name name = null;
         // Manage decarator detected as simple expression
         if (decorator.expression().is(Tree.Kind.NAME)) {

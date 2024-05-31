@@ -12,3 +12,7 @@ class A:
 @cache  # Noncompliant {{Do not set cache size to unlimited}}
 def cached_function():
     print('a')
+
+@lru_cache(maxsize=None)  # Noncompliant {{Do not set cache size to unlimited}}
+def cached_method():
+    print('b')
