@@ -13,7 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- [#22](https://github.com/green-code-initiative/ecoCode-python/issues/22) Depreciation of EC69 rule for python because not relevant (after analysis)
+
 ### Deleted
+
+- [#22](https://github.com/green-code-initiative/ecoCode-python/issues/22) Delete deprecated EC66 rule for Python
 
 ## [1.4.3] - 2024-05-15
 
@@ -26,9 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [#17](https://github.com/green-code-initiative/ecoCode-python/issues/17) EC7 - correction setter problem on constructor method
 - check Sonarqube 10.4.1 compatibility + update docker files and README.md / NOT OK with 10.5.x (issue created)
-
-- [#4](https://github.com/green-code-initiative/ecoCode-python/issues/4) Deprecate rule EC66 for Python because not applicable (see details inside issue)
-- [#21](https://github.com/green-code-initiative/ecoCode-python/issues/21) Deletion of EC69 for python because not relevant (after analysis)
 
 ## [1.4.2] - 2024-01-11
 
