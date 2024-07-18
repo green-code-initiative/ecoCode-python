@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changed
+
+### Deleted
+
+## [1.4.4] - 2024-07-18
+
+### Added
+
 - [#26](https://github.com/green-code-initiative/ecoCode-python/issues/26) [EC89] Avoid unlimited cache
 
 ### Changed
@@ -68,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Comparison list
 
-[unreleased](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.3...HEAD)
+[unreleased](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.4...HEAD)
+[1.4.4](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.3...1.4.4)
 [1.4.3](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.2...1.4.3)
 [1.4.2](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.1...1.4.2)
 [1.4.1](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.0...1.4.1)
