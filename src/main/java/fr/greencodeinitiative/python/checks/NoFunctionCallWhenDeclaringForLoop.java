@@ -23,6 +23,11 @@ import org.sonar.plugins.python.api.tree.CallExpression;
 import org.sonar.plugins.python.api.tree.Tree;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
+/**
+ * @deprecated not applicable for Python
+ * (check discussion inside issue https://github.com/green-code-initiative/ecoCode-python/issues/21)
+ */
+@Deprecated(forRemoval = true)
 @Rule(key = "EC69")
 @DeprecatedRuleKey(repositoryKey = "gci-python", ruleKey = "S69")
 public class NoFunctionCallWhenDeclaringForLoop extends PythonSubscriptionCheck {

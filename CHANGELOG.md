@@ -13,13 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- [#22](https://github.com/green-code-initiative/ecoCode-python/issues/22) Depreciation of EC69 rule for python because not relevant (after analysis)
+
 ### Deleted
+
+- [#22](https://github.com/green-code-initiative/ecoCode-python/issues/22) Delete deprecated EC66 rule for Python
 
 ## [1.4.3] - 2024-05-15
 
 ### Added
 
 - [#18](https://github.com/green-code-initiative/ecoCode-python/issues/18) Add support for SonarQube 10.4 "DownloadOnlyWhenRequired" feature
+- Add Support for SonarQube 10.4.1
 
 ### Changed
 
