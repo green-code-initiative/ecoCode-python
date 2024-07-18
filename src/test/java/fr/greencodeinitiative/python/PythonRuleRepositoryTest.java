@@ -78,7 +78,7 @@ class PythonRuleRepositoryTest {
 
   @Test
   void testRegistredRules() {
-    assertThat(repository.rules()).hasSize(10);
+    assertThat(repository.rules()).hasSize(11);
   }
 
   @Test
