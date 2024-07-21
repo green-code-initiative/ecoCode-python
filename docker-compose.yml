@@ -1,23 +1,27 @@
-version: "3.3"
+name: sonarqube_ecocode_python
+
 services:
   sonar:
-    image: sonarqube:10.4.1-community
+    build: .
     container_name: sonar_ecocode_python
     ports:
       - ":9000"
     networks:
       - sonarnet
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       SONAR_JDBC_USERNAME: sonar
       SONAR_JDBC_PASSWORD: sonar
       SONAR_JDBC_URL: jdbc:postgresql://db:5432/sonarqube
       SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: 'true'
+    env_file:
+      - path: ./.default.docker.env
+        required: true
+      - path: ./.override.docker.env
+        required: false
     volumes:
-      - type: bind
-        source: ./target/ecocode-python-plugin-1.4.5-SNAPSHOT.jar
-        target: /opt/sonarqube/extensions/plugins/ecocode-python-plugin-1.4.5-SNAPSHOT.jar
       - "extensions:/opt/sonarqube/extensions"
       - "logs:/opt/sonarqube/logs"
       - "data:/opt/sonarqube/data"
@@ -34,6 +38,11 @@ services:
       POSTGRES_PASSWORD: sonar
       POSTGRES_DB: sonarqube
       PGDATA: pg_data:/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U sonar -d sonarqube" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
 networks:
   sonarnet:
