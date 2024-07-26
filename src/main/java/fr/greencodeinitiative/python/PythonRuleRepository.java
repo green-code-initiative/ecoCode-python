@@ -28,6 +28,20 @@ import java.util.List;
 
 public class PythonRuleRepository implements RulesDefinition, PythonCustomRuleRepository {
 
+    static final List<Class> ANNOTATED_RULE_CLASSES = Arrays.asList(
+            AvoidGettersAndSetters.class,
+            AvoidGlobalVariableInFunctionCheck.class,
+            AvoidSQLRequestInLoop.class,
+            AvoidTryCatchWithFileOpenedCheck.class,
+            AvoidUnlimitedCache.class,
+            AvoidUnoptimizedVectorImagesCheck.class,
+            NoFunctionCallWhenDeclaringForLoop.class,
+            AvoidFullSQLRequest.class,
+            AvoidListComprehensionInIterations.class,
+            DetectUnoptimizedImageFormat.class,
+            AvoidMultipleIfElseStatementCheck.class
+    );
+
     public static final String LANGUAGE = "py";
     public static final String NAME = "ecoCode";
     public static final String RESOURCE_BASE_PATH = "io/ecocode/rules/python";
@@ -54,18 +68,6 @@ public class PythonRuleRepository implements RulesDefinition, PythonCustomRuleRe
 
     @Override
     public List<Class> checkClasses() {
-        return Arrays.asList(
-                AvoidGettersAndSetters.class,
-                AvoidGlobalVariableInFunctionCheck.class,
-                AvoidSQLRequestInLoop.class,
-                AvoidTryCatchWithFileOpenedCheck.class,
-                AvoidUnlimitedCache.class,
-                AvoidUnoptimizedVectorImagesCheck.class,
-                NoFunctionCallWhenDeclaringForLoop.class,
-                AvoidFullSQLRequest.class,
-                AvoidListComprehensionInIterations.class,
-                DetectUnoptimizedImageFormat.class,
-                AvoidMultipleIfElseStatementCheck.class
-        );
+        return ANNOTATED_RULE_CLASSES;
     }
 }

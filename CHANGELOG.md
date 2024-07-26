@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - refactoring docker system
+- [#29](https://github.com/green-code-initiative/ecoCode-python/issues/29) Add test to ensure all Rules are registered
 
 ### Deleted
 
