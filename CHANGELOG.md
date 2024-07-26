@@ -23,7 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- [#22](https://github.com/green-code-initiative/ecoCode-python/issues/22) Depreciation of EC69 rule for python because not relevant (after analysis)
+- [#22](https://github.com/green-code-initiative/ecoCode-python/issues/22) Depreciation of EC69 rule for python because
+  not relevant (after analysis)
 
 ### Deleted
 
@@ -33,12 +34,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#18](https://github.com/green-code-initiative/ecoCode-python/issues/18) Add support for SonarQube 10.4 "DownloadOnlyWhenRequired" feature
+- [#18](https://github.com/green-code-initiative/ecoCode-python/issues/18) Add support for SonarQube 10.4 "
+  DownloadOnlyWhenRequired" feature
 - Add Support for SonarQube 10.4.1
 
 ### Changed
 
-- [#17](https://github.com/green-code-initiative/ecoCode-python/issues/17) EC7 - correction setter problem on constructor method
+- [#17](https://github.com/green-code-initiative/ecoCode-python/issues/17) EC7 - correction setter problem on
+  constructor method
 - check Sonarqube 10.4.1 compatibility + update docker files and README.md / NOT OK with 10.5.x (issue created)
 
 ## [1.4.2] - 2024-01-11
@@ -56,8 +59,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- [#5](https://github.com/green-code-initiative/ecoCode-python/pull/5) Upgrade licence system and licence headers of Java files
-- [#6](https://github.com/green-code-initiative/ecoCode-python/pull/6) Adding EC35 rule : EC35 rule replaces EC34 with a specific use case ("file not found" sepcific)
+- [#5](https://github.com/green-code-initiative/ecoCode-python/pull/5) Upgrade licence system and licence headers of
+  Java files
+- [#6](https://github.com/green-code-initiative/ecoCode-python/pull/6) Adding EC35 rule : EC35 rule replaces EC34 with a
+  specific use case ("file not found" sepcific)
 - [#7](https://github.com/green-code-initiative/ecoCode-python/issues/7) Add build number to manifest
 - [#123](https://github.com/green-code-initiative/ecoCode/issues/123) Improve unit tests for EC7 rule
 - Update ecocode-rules-specifications to 1.4.6
@@ -66,14 +71,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deleted
 
-- [#4](https://github.com/green-code-initiative/ecoCode-python/issues/4) Deprecate rule EC66 for Python because not applicable (see details inside issue)
+- [#4](https://github.com/green-code-initiative/ecoCode-python/issues/4) Deprecate rule EC66 for Python because not
+  applicable (see details inside issue)
 
 ## [1.4.0] - 2023-08-08
 
 ### Added
 
 - Python rules moved from `ecoCode` repository to current repository
-- [#142](https://github.com/green-code-initiative/ecoCode/issues/142) new Python rule : Multiple if-else statement + refactoring implementation
+- [#142](https://github.com/green-code-initiative/ecoCode/issues/142) new Python rule : Multiple if-else statement +
+  refactoring implementation
 - [#205](https://github.com/green-code-initiative/ecoCode/issues/205) compatibility with SonarQube 10.1
 
 ## Comparison list
