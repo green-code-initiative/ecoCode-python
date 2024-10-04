@@ -13,12 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - refactoring docker system
 - [#29](https://github.com/green-code-initiative/ecoCode-python/issues/29) Add test to ensure all Rules are registered
-- [#24](https://github.com/green-code-initiative/ecoCode-python/issues/24) Set correct required language because the plugin wasn't loaded anymore => change of retro-compatibility (9.9.0 to 10.7 and not compatible before 9.9.0) AND add support for > 10.5 Sonarqube version (up to 10.7.0)
-- update some maven plugin versions and librarie versions to be up-to-date
+- [#24](https://github.com/green-code-initiative/ecoCode-python/issues/24) Set correct required language because the
+  plugin wasn't loaded anymore - retro-compatibility modifications (9.9.0 to 10.7 and not compatible before 9.9.0) AND
+  add support for > 10.5 Sonarqube version (up to 10.7.0)
+- update some maven plugin versions and library versions to be up-to-date
+- correction of SonarCloud issues
 
 ### Deleted
 
-- delete EC69 rule because of deprecation (see RULES.md file)
+- deletion of EC69 rule because of already deprecated (see RULES.md file)
 
 ## [1.4.4] - 2024-07-18
 
@@ -39,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#18](https://github.com/green-code-initiative/ecoCode-python/issues/18) Add support for SonarQube 10.4 "DownloadOnlyWhenRequired" feature
+- [#18](https://github.com/green-code-initiative/ecoCode-python/issues/18) Add support for SonarQube 10.4 "
+  DownloadOnlyWhenRequired" feature
 - Add Support for SonarQube 10.4.1
 
 ### Changed
@@ -66,7 +70,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#5](https://github.com/green-code-initiative/ecoCode-python/pull/5) Upgrade licence system and licence headers of
   Java files
 - [#6](https://github.com/green-code-initiative/ecoCode-python/pull/6) Adding EC35 rule : EC35 rule replaces EC34 with a
-  specific use case ("file not found" sepcific)
+  specific use case ("file not found" specific)
 - [#7](https://github.com/green-code-initiative/ecoCode-python/issues/7) Add build number to manifest
 - [#123](https://github.com/green-code-initiative/ecoCode/issues/123) Improve unit tests for EC7 rule
 - Update ecocode-rules-specifications to 1.4.6

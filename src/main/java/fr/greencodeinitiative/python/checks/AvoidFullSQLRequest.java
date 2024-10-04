@@ -18,12 +18,6 @@
 package fr.greencodeinitiative.python.checks;
 
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.regex.Pattern;
-
 import org.sonar.check.Rule;
 import org.sonar.plugins.python.api.PythonSubscriptionCheck;
 import org.sonar.plugins.python.api.SubscriptionContext;
@@ -32,14 +26,18 @@ import org.sonar.plugins.python.api.tree.StringLiteral;
 import org.sonar.plugins.python.api.tree.Tree;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
+
 @Rule(key = "EC74")
 @DeprecatedRuleKey(repositoryKey = "gci-python", ruleKey = "S74")
 public class AvoidFullSQLRequest extends PythonSubscriptionCheck {
 
-    protected static final String MESSAGERULE = "Don't use the query SELECT * FROM";
+    protected static final String MESSAGE_RULE = "Don't use the query SELECT * FROM";
 
-    // TODO DDC : create support to add in deployment th dependency com.google.re2j:re2j
-    // and replace "import java.util.regex.Pattern" by "import com.google.re2j.Pattern"
     private static final Pattern PATTERN = Pattern.compile("(?i).*select.*\\*.*from.*");
     private static final Map<String, Collection<Integer>> linesWithIssuesByFile = new HashMap<>();
 
@@ -68,7 +66,7 @@ public class AvoidFullSQLRequest extends PythonSubscriptionCheck {
             linesWithIssuesByFile.computeIfAbsent(classname, k -> new ArrayList<>());
             linesWithIssuesByFile.get(classname).add(line);
         }
-        ctx.addIssue(stringElement, MESSAGERULE);
+        ctx.addIssue(stringElement, MESSAGE_RULE);
     }
 
     private boolean lineAlreadyHasThisIssue(StringElement stringElement, SubscriptionContext ctx) {
