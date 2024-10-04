@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+### Deleted
+
+## [1.5.0] - 2024-10-04
+
+### Changed
+
 - refactoring docker system
 - [#29](https://github.com/green-code-initiative/ecoCode-python/issues/29) Add test to ensure all Rules are registered
 - [#24](https://github.com/green-code-initiative/ecoCode-python/issues/24) Set correct required language because the
@@ -93,7 +99,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Comparison list
 
-[unreleased](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.4...HEAD)
+[unreleased](https://github.com/green-code-initiative/ecoCode-python/compare/1.5.0...HEAD)
+[1.5.0](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.4...1.5.0)
 [1.4.4](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.3...1.4.4)
 [1.4.3](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.2...1.4.3)
 [1.4.2](https://github.com/green-code-initiative/ecoCode-python/compare/1.4.1...1.4.2)
