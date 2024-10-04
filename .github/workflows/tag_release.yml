@@ -45,8 +45,8 @@ jobs:
         id: export_jar_files
         uses: actions/upload-artifact@v3
         with:
-          name: ecocode-plugins
-          path: target
+          #name: ecocode-plugins
+          path: target/ecocode-python-plugin-${{ github.ref_name }}.jar
       - name: Export UPLOAD_URL
         id: export_upload_url
         run: echo "upload_url=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_OUTPUT
@@ -60,15 +60,17 @@ jobs:
         id: import_jar_files
         uses: actions/download-artifact@v4.1.7
         with:
-          name: ecocode-plugins
-          path: target
-      - name: Upload Release Asset - Python Plugin
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{needs.build.outputs.upload_url}}
-          asset_path: target/ecocode-python-plugin-${{ github.ref_name }}.jar
-          asset_name: ecocode-python-plugin-${{ github.ref_name }}.jar
-          asset_content_type: application/zip
+          # name: ecocode-plugins
+          #path: target
+          path: ./
+          if-no-files-found: error
+#      - name: Upload Release Asset - Python Plugin
+#        id: upload-release-asset
+#        uses: actions/upload-release-asset@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          upload_url: ${{needs.build.outputs.upload_url}}
+#          asset_path: target/ecocode-python-plugin-${{ github.ref_name }}.jar
+#          asset_name: ecocode-python-plugin-${{ github.ref_name }}.jar
+#          asset_content_type: application/zip
