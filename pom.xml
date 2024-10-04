@@ -5,7 +5,7 @@
 
     <groupId>io.ecocode</groupId>
     <artifactId>ecocode-python-plugin</artifactId>
-    <version>1.4.5-SNAPSHOT</version>
+    <version>1.5.0-SNAPSHOT</version>
     <packaging>sonar-plugin</packaging>
 
     <name>ecoCode - Python language</name>
@@ -54,7 +54,6 @@
         <!-- max version with SonarQube 10.0 : check lib/extension directory -->
         <sonarpython.version>4.1.0.11333</sonarpython.version>
 
-        <sonar-packaging.version>1.23.0.740</sonar-packaging.version>
         <sonar.skipDependenciesPackaging>true</sonar.skipDependenciesPackaging>
 
         <mockito.version>5.3.1</mockito.version>
@@ -125,17 +124,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.13.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>3.5.0</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.10</version>
+                <version>0.8.12</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -154,7 +153,7 @@
             <plugin>
                 <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
                 <artifactId>sonar-packaging-maven-plugin</artifactId>
-                <version>${sonar-packaging.version}</version>
+                <version>1.23.0.740</version>
                 <extensions>true</extensions>
                 <configuration>
                     <pluginKey>ecocodepython</pluginKey>
@@ -175,7 +174,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.0</version>
+                <version>3.6.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -220,7 +219,7 @@
                 <!-- plugin to generate a unique build number for sonar-packaging-maven-plugin : usage of buildNumber variable -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
@@ -237,7 +236,7 @@
             <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
-                <version>4.1</version>
+                <version>4.6</version>
                 <configuration>
                     <properties>
                         <owner>Green Code Initiative</owner>
