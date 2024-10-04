@@ -23,6 +23,8 @@ import org.sonar.python.checks.utils.PythonCheckVerifier;
 public class AvoidGlobalVariableInFunctionCheckTest {
     @Test
     public void test() {
-        PythonCheckVerifier.verify("src/test/resources/checks/avoidGlobalVariableInFunction.py", new AvoidGlobalVariableInFunctionCheck());
+        PythonCheckVerifier.verify("src/test/resources/checks/avoidGlobalVariableInFunctionNonCompliant.py", new AvoidGlobalVariableInFunctionCheck());
+        //PythonCheckVerifier.verifyNoIssue("src/test/resources/checks/avoidGlobalVariableInFunctionCompliant.py", new AvoidGlobalVariableInFunctionCheck());
+        PythonCheckVerifier.verify("src/test/resources/checks/avoidGlobalVariableInFunctionNonCompliant2.py", new AvoidGlobalVariableInFunctionCheck());
     }
 }
