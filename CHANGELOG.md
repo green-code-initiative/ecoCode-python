@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - refactoring docker system
 - [#29](https://github.com/green-code-initiative/ecoCode-python/issues/29) Add test to ensure all Rules are registered
-- [#24](https://github.com/green-code-initiative/ecoCode-python/issues/24) Set correct required language because the plugin wasn't loaded anymore
+- [#24](https://github.com/green-code-initiative/ecoCode-python/issues/24) Set correct required language because the plugin wasn't loaded anymore => change of retro-compatibility (9.9.0 to 10.7 and not compatible before 9.9.0)
 
 ### Deleted
 
